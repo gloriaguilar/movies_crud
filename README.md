@@ -12,4 +12,4 @@ DASHBOARD OF  MOVIES CRUD
 - [ Movies ]  
 - Email smtp
 - Form Validation
-> Heres the documentation (Movies crud.pdf)
+> Heres the documentation (https://gitlab.com/gloria_aguilar/movie-crud/-/blob/main/Movies%20Crud.pdf) 
