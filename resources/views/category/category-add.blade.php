@@ -9,14 +9,14 @@
             <label for="validationTitle" class="form-label">Title </label>
             <input type="text" name="title" class="form-control" id="validationTitle" required>
             <div id="validationTitle" class="invalid-feedback">
-                This field is requiered
+                This field is required
             </div>
         </div>
         <div class="col-md-4">
             <label for="validationDescription" class="form-label">Description </label>
             <input type="text" name="description" class="form-control" id="validationDescription" required>
             <div id="validationTitle" class="invalid-feedback">
-                This field is requiered
+                This field is required
             </div>
         </div>
         <div class="col-12">

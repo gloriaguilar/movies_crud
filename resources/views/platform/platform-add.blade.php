@@ -9,21 +9,21 @@
             <label for="validationTitle" class="form-label">Title </label>
             <input type="text" name="title" class="form-control" id="validationTitle" required>
             <div id="validationTitle" class="invalid-feedback">
-                This field is requiered
+                This field is required
             </div>
         </div>
         <div class="col-md-4">
             <label for="validationUrlSite" class="form-label">URL site</label>
             <input type="text" name="url" class="form-control" id="validationUrlSite" required>
-            <div class="valid-feedback">
-                Looks good!
+            <div id="validationTitle" class="invalid-feedback">
+                This field is required
             </div>
         </div>
         <div class="col-md-4">
             <label for="validationUrImage" class="form-label">URL Logo</label>
             <input type="text" name="image_url" class="form-control" id="validationUrImage" required>
-            <div class="valid-feedback">
-                Looks good!
+            <div id="validationTitle" class="invalid-feedback">
+                This field is required
             </div>
         </div>
         <div class="col-12">

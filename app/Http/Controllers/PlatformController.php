@@ -34,8 +34,10 @@ class PlatformController extends Controller
         $platform->url = $request->url;
         $platform->image_url = $request->image_url;
         $platform->user_id = $this->getUserID();
-        $platform->save();
-        
+        $response = $platform->save();
+        if(!$response){
+            return redirect()->back()->with('faild', 'Something went wrong');
+        }
         return redirect()->back()->with('success', 'Platform Added');
     }
 

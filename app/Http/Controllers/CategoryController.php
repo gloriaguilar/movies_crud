@@ -31,7 +31,10 @@ class CategoryController extends Controller
         $category->title= $request->title;
         $category->description = $request->description;
         $category->user_id =$this->getUserID();
-        $category->save();
+        $response = $category->save();
+        if(!$response){
+            return redirect()->back()->with('faild', 'Something went wrong');
+        }
         return redirect()->back()->with('success', 'Category Added');
 
     }

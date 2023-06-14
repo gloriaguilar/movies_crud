@@ -8,34 +8,35 @@
         <div class="col-md-4">
             <label for="validationTitle" class="form-label">Title </label>
             <input type="text" name="title" class="form-control" id="validationTitle" required>
-            <div class="valid-feedback">
-                Looks good!
+            <div id="validationTitle" class="invalid-feedback">
+                This field is required
             </div>
         </div>
         <div class="col-md-4">
             <label for="validationDescription" class="form-label">Description</label>
             <input type="text" name="description" class="form-control" id="validationDescription" required>
-            <div class="valid-feedback">
-                Looks good!
+            <div id="validationTitle" class="invalid-feedback">
+                This field is required
             </div>
         </div>
         <div class="col-md-4">
             <label for="validationUrImage" class="form-label">URL image</label>
             <input type="text" name="url_image" class="form-control" id="validationUrImage" required>
-            <div class="valid-feedback">
-                Looks good!
+            <div id="validationTitle" class="invalid-feedback">
+                This field is required
             </div>
         </div>
         <div class="col-md-4">
             <label for="validationYear" class="form-label">Year</label>
-            <input type="number" name="year" class="form-control" id="validationYear" required>
-            <div class="valid-feedback">
-                Looks good!
+            <input type="number" name="year" min="1990" max="2023" class="form-control" id="validationYear"
+                required>
+            <div id="validationTitle" class="invalid-feedback">
+                This field is required
             </div>
         </div>
         <div class="col-md-4">
             <label class="form-label">Category</label>
-            <select class="form-select" name="category">
+            <select required class="form-select" name="category">
                 <option selected>Select category</option>
                 @foreach ($categories as $category)
                     <option value="{{ $category->id }}">{{ $category->title }}</option>
@@ -44,7 +45,7 @@
         </div>
         <div class="col-md-4">
             <label class="form-label">Platform to watch</label>
-            <select class="form-select" name="platform">
+            <select required class="form-select" name="platform">
                 <option selected>Select category</option>
                 @foreach ($platforms as $platform)
                     <option value="{{ $platform->id }}">{{ $platform->title }}</option>
