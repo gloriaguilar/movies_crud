@@ -33,7 +33,10 @@ class AuthController extends Controller
         if(!$registered){
             return redirect()->back()->with('fail', 'Something went wrong');
         }
+        (new MailController)->newUser($user);
+        
         return redirect()->back()->with('success', 'You have registered successfuly');
+
     }
 
     public function login(){

@@ -22,11 +22,14 @@
         @endif
     </div>
     <div class="row">
+
+    </div>
+    <div class="row text-center">
         @foreach ($categories as $value)
             <div class="col-4 mb-4">
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 100%;">
                     <div class="card-body">
-                        <h5 class="card-title">{{ $value->title }}</h5>
+                        <h5 class="card-title" id="hola">{{ $value->title }}</h5>
                         <p class="card-text">{{ $value->description }}</p>
                     </div>
                     <div class="card-footer">

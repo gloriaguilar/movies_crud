@@ -7,14 +7,14 @@ use App\Models\Movie;
 use App\Models\Platform;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use App\Http\Controllers\MailController;
 
 class MovieController extends Controller
 {
     //
 
     public function index(){
-        
-  
+
         $movies = Movie::with(['category','platform'])->get();
         return view('movie.movie-list',compact('movies'));
     }
@@ -45,7 +45,11 @@ class MovieController extends Controller
         $movie->category_id = $request->category;
         $movie->platform_id = $request->platform;
         $movie->user_id = $this->getUserID();
-        $movie->save();
+        $response = $movie->save(); 
+        if(!$response){
+            return redirect()->back()->with('faild', 'Something went wrong');
+        }
+        (new MailController)->newMovie($movie);
         return redirect()->back()->with('success', 'Movie Added');
 
     }
